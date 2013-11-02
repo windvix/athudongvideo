@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1A1B"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <!-- bottom bar -->
+
+    <LinearLayout
+        android:paddingTop="6dp"
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_weight="0"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/bottomBarBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bottom_bar_item_select_bg"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_bar_01" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomBarBtn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_bar_02" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomBarBtn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_bar_03" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomBarBtn4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_bar_04" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomBarBtn5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bottom_bar_05" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- bottom bar -->
+
+</LinearLayout>

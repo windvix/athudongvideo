@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shape="http://schemas.android.com/apk/res/com.athudong.video"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:background="#D8D8D8" />
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" >
+
+            <LinearLayout
+                android:id="@+id/top_half_circle"
+                android:layout_width="9dp"
+                android:layout_height="9dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true" 
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="9dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainLayout"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp" >
+
+        <TextView
+            android:id="@+id/listEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没有更多了"
+            android:textColor="#959595"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

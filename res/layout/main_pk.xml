@@ -1,0 +1,367 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1A1B"
+    android:orientation="vertical" >
+
+    <!-- actionbar start -->
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0"
+        android:background="#070506"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#F9F8F6"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/action_bar_btn" />
+    </RelativeLayout>
+    <!-- actionbar end -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <!-- circleLayout start -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <RelativeLayout
+                android:id="@+id/topMoveLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/realTopBtn01"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_01"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/realTopBtn02"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_toRightOf="@id/realTopBtn01"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_02"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/realTopBtn04"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_04"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/realTopBtn03"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_toLeftOf="@id/realTopBtn04"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_03"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <!-- circleLayout end -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#F9F8F6"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="小晓"
+                android:textColor="#F9F8F6"
+                android:textSize="19sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/head_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/head_right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Annie"
+                android:textColor="#F9F8F6"
+                android:textSize="19sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <!-- circleLayout start -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <RelativeLayout
+                android:id="@+id/bottomMoveLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <ImageView
+                    android:id="@+id/realBottomBtn01"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_04"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/realBottomBtn02"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/realBottomBtn01"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_03"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/realBottomBtn04"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_01"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/realBottomBtn03"
+                    android:layout_width="@dimen/circle_size"
+                    android:layout_height="@dimen/circle_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/realBottomBtn04"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/anim_btn_02"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <!-- circleLayout end -->
+
+    </LinearLayout>
+
+    <!-- pk start -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/thumb_layout_left"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/leftThumbLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/thumb_round" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/thumb" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/start_thumb_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/thumb_btn"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="开始投票"
+                android:textColor="#F9F8F6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/thumb_layout_right"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/rightThumbLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/thumb_round" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/thumb" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- pk end -->
+
+</LinearLayout>
