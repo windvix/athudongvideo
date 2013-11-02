@@ -1,5 +1,3 @@
 /bin
 /gen
 *.class
-*.classpath
-*.project
