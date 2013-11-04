@@ -11,7 +11,7 @@ public class PersonResourceActivity extends BaseActivity{
 
 	@Override
 	protected void initView(Bundle savedInstanceState) {
-		
+		setContentView(R.layout.activity_personres);
 	}
 
 	@Override
