@@ -29,7 +29,18 @@ public class MainActivityCircle implements OnClickListener {
 		if (id == R.id.circle_layout_01) {
 			Intent intent = new Intent(act, ZoneActivity.class);
 			act.startActivity(intent);
-		} else {
+		} else if (id == R.id.circle_layout_02) {
+			Intent intent = new Intent(act, FansActivity.class);
+			act.startActivity(intent);
+		} else if (id == R.id.circle_layout_03) {
+			Intent intent = new Intent(act, RecentActivity.class);
+			act.startActivity(intent);
+		} else if (id == R.id.circle_layout_04) {
+			Intent intent = new Intent(act, MsgBoardActivity.class);
+			act.startActivity(intent);
+		}
+
+		else {
 
 			act.toast(id + "内测中");
 		}
