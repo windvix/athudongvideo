@@ -117,7 +117,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/circie_star" />
+                    android:src="@drawable/circle_star_btn" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -140,7 +140,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/circle_friend" />
+                    android:src="@drawable/circle_friend_btn" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/circle_time" />
+                    android:src="@drawable/circle_time_btn" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -186,7 +186,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/circle_chat" />
+                    android:src="@drawable/circle_chat_btn" />
 
                 <TextView
                     android:layout_width="wrap_content"
