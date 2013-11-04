@@ -50,6 +50,8 @@ public class MainActivityPK implements OnClickListener {
 		root.findViewById(R.id.rightThumbLayout).setVisibility(View.INVISIBLE);
 	}
 
+	private boolean add = false;
+
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
@@ -65,10 +67,20 @@ public class MainActivityPK implements OnClickListener {
 		} else if (id == R.id.realBottomBtn02 || id == R.id.realTopBtn03) {
 			Intent intent = new Intent(act, PersonResourceActivity.class);
 			act.startActivity(intent);
+		} else if (id == R.id.realTopBtn02 || id == R.id.realBottomBtn03) {
+			Intent intent = new Intent(act, PersonPhotoActivity.class);
+			act.startActivity(intent);
+		} else if (id == R.id.realBottomBtn04 || id == R.id.realTopBtn01) {
+			if (add) {
+				act.toast("已关注");
+			} else {
+				act.toast("关注+1");
+				add = true;
+			}
 		}
 
 		else {
-			act.toast(v.getId() + "");
+			act.toast(v.getId() + "内测中");
 		}
 	}
 

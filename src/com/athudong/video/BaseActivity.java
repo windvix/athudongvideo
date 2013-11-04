@@ -157,7 +157,7 @@ public abstract class BaseActivity extends Activity {
 	 * 返回动画
 	 */
 	protected void backAnim() {
-		
+		overridePendingTransition(R.anim.in_from_left, R.anim.out_to_right);
 	}
 
 	/**
@@ -181,7 +181,7 @@ public abstract class BaseActivity extends Activity {
 	 * 启动activity的动画效果
 	 */
 	public void startAnim() {
-		
+		overridePendingTransition(R.anim.in_from_right, R.anim.out_to_left);
 	}
 
 	/**

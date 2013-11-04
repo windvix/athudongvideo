@@ -13,37 +13,41 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        
+
         <!-- 欢迎界面 -->
         <activity
             android:name="com.athudong.video.WelcomeActivity"
-            android:label="@string/app_name" 
+            android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
         <!-- 引导界面 -->
-        <activity 
+        <activity
             android:name="com.athudong.video.GuideActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
-        
-        <activity 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
             android:name="com.athudong.video.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        
-        
-                <activity 
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
             android:name="com.athudong.video.PersonResourceActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
-            android:screenOrientation="portrait"/>
-        
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name="com.athudong.video.PersonPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing" />
     </application>
 
 </manifest>

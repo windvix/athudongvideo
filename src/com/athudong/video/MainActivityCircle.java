@@ -1,10 +1,11 @@
 package com.athudong.video;
 
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AbsoluteLayout.LayoutParams;
 import android.widget.LinearLayout;
 
-public class MainActivityCircle {
+public class MainActivityCircle implements OnClickListener{
 
 	private MainActivity act;
 	private View root;
@@ -12,8 +13,42 @@ public class MainActivityCircle {
 	public MainActivityCircle(MainActivity act, View root) {
 		this.act = act;
 		this.root = root;
+		root.findViewById(R.id.circle_layout_01).setOnClickListener(this);
+		root.findViewById(R.id.circle_layout_02).setOnClickListener(this);
+		root.findViewById(R.id.circle_layout_03).setOnClickListener(this);
+		root.findViewById(R.id.circle_layout_04).setOnClickListener(this);
 	}
 
+	
+
+	@Override
+	public void onClick(View v) {
+		
+		int id = v.getId();
+		act.toast(id+"");
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private int top;
 
 	private float r;
@@ -112,4 +147,6 @@ public class MainActivityCircle {
 			}
 		});
 	}
+
+
 }
