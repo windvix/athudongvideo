@@ -42,7 +42,7 @@ public class HalfCircleView extends View {
 		RectF oval = new RectF(); // 浮点型的
 
 		paint.setColor(color);
-		
+		paint.setAntiAlias(true);//设置没有锯齿
 		paint.setStyle(Style.FILL_AND_STROKE); // 空心的
 
 		oval = new RectF();
