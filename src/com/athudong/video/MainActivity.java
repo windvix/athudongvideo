@@ -135,6 +135,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			new Handler().postDelayed(new Runnable() {
 				@Override
 				public void run() {
+					MainActivity.this.finish();
 					System.exit(0);// 使虚拟机停止运行并退出程序
 				}
 			}, 1500);
@@ -236,16 +237,16 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 				}
 				if (page == 0) {
 					anim = new PKAnim(MainActivity.this);
-					mainCircle.reset();
+					mainCircle.resetLoc();
 				} else if (page == 1) {
 					mainPk.reset();
 					new CircleAnim(MainActivity.this);
 				} else if (page == 2) {
 					mainPk.reset();
-					mainCircle.reset();
+					mainCircle.resetLoc();
 				} else if (page == 3) {
 					mainPk.reset();
-					mainCircle.reset();
+					mainCircle.resetLoc();
 				}
 			}
 		}

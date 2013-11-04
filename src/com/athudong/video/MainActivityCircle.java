@@ -32,8 +32,12 @@ public class MainActivityCircle {
 		setCircle2();
 		setCircle3();
 		setCircle4();
-		
-		reset();
+		//设置为不可见
+		root.findViewById(R.id.circle_layout_01).setVisibility(View.INVISIBLE);
+		root.findViewById(R.id.circle_layout_02).setVisibility(View.INVISIBLE);
+		root.findViewById(R.id.circle_layout_03).setVisibility(View.INVISIBLE);
+		root.findViewById(R.id.circle_layout_04).setVisibility(View.INVISIBLE);
+	
 
 	}
 	
@@ -107,13 +111,5 @@ public class MainActivityCircle {
 				view.setLayoutParams(lp);
 			}
 		});
-	}
-	
-	public void reset(){
-		//设置为不可见
-		root.findViewById(R.id.circle_layout_01).setVisibility(View.INVISIBLE);
-		root.findViewById(R.id.circle_layout_02).setVisibility(View.INVISIBLE);
-		root.findViewById(R.id.circle_layout_03).setVisibility(View.INVISIBLE);
-		root.findViewById(R.id.circle_layout_04).setVisibility(View.INVISIBLE);
 	}
 }

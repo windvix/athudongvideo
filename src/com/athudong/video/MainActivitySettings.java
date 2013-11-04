@@ -49,6 +49,7 @@ public class MainActivitySettings implements OnClickListener {
 				@Override
 				public void onClick(View v) {
 					dialog.dismiss();
+					act.finish();
 					System.exit(0);
 				}
 			});
