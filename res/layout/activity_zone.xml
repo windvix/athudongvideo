@@ -3,6 +3,165 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
+    <!-- actionbar start -->
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0"
+        android:background="#070506"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back_btn" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="星空间"
+            android:textColor="#F9F8F6"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/action_bar_btn" />
+    </RelativeLayout>
+    <!-- actionbar end -->
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        ptr:ptrAnimationStyle="rotate"
+        ptr:ptrMode="pullFromStart" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- part1 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="0" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/guide_page" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/leftLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/left_Img"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/zone_head_bg" />
+
+                        <TextView
+                            android:id="@+id/left_Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:shadowColor="#000"
+                            android:shadowDx="5"
+                            android:shadowDy="5"
+                            android:shadowRadius="5"
+                            android:text="明星"
+                            android:textColor="#fefefe"
+                            android:textSize="30sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <ImageView
+                            android:id="@+id/mid_Img"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/big_arrow_left" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rightLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <ImageView
+                            android:id="@+id/right_Img"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_centerInParent="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/zone_head_bg" />
+
+                        <TextView
+                            android:id="@+id/right_Tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:shadowColor="#000"
+                            android:shadowDx="5"
+                            android:shadowDy="5"
+                            android:shadowRadius="5"
+                            android:text="经纪"
+                            android:textColor="#fefefe"
+                            android:textSize="30sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <!-- part1 end -->
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_weight="1" >
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 
 </LinearLayout>

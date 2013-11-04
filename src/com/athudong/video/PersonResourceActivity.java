@@ -51,6 +51,8 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 
 	private ImageView cursor;
 
+	
+	
 	@Override
 	protected void initView(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_personres);
@@ -67,7 +69,10 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		viewpager = (ViewPager) vpView.findViewById(R.id.viewpager);
 		listView = new ArrayList<View>();
 
-		listView.add(createView(R.layout.personres_page1));
+		
+		View page1 = createView(R.layout.personres_page1);
+		
+		listView.add(page1);
 		listView.add(createView(R.layout.personres_page2));
 		listView.add(createView(R.layout.personres_page3));
 
@@ -93,6 +98,12 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		contentLayout.addView(vpView);
 
 		cursor = (ImageView) findViewById(R.id.cursor);
+		
+		
+		page1.findViewById(R.id.video_01).setOnClickListener(this);
+		page1.findViewById(R.id.video_02).setOnClickListener(this);
+		page1.findViewById(R.id.video_03).setOnClickListener(this);
+		page1.findViewById(R.id.video_04).setOnClickListener(this);
 	}
 
 	@Override
@@ -139,6 +150,8 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 			viewpager.setCurrentItem(1);
 		} else if (id == R.id.page_btn_03) {
 			viewpager.setCurrentItem(2);
+		}else{
+			toast("内测中，敬请期待");
 		}
 	}
 
@@ -236,7 +249,7 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 
 		private void startAnim(ObjectAnimator anim) {
 			if (anim != null) {
-				anim.setDuration(300);
+				anim.setDuration(200);
 				anim.start();
 			}
 		}
