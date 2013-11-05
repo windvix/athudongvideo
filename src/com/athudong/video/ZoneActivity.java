@@ -3,6 +3,7 @@ package com.athudong.video;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -45,6 +46,9 @@ public class ZoneActivity extends BaseActivity implements OnClickListener,  OnRe
 	
 	private PullToRefreshScrollView scrollView;
 
+	
+	private View page01;
+	
 	@Override
 	protected void initView(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_zone);
@@ -65,7 +69,10 @@ public class ZoneActivity extends BaseActivity implements OnClickListener,  OnRe
 		findViewById(R.id.leftLayout).setOnClickListener(this);
 		findViewById(R.id.rightLayout).setOnClickListener(this);
 
-		viewList.add(createView(R.layout.zone_page_01));
+		
+		page01 = createView(R.layout.zone_page_01);
+		
+		viewList.add(page01);
 		viewList.add(createView(R.layout.zone_page_02));
 
 		viewpager.setAdapter(new ViewPagerAdapter(viewList));
@@ -98,6 +105,25 @@ public class ZoneActivity extends BaseActivity implements OnClickListener,  OnRe
 		
 		scrollView = (PullToRefreshScrollView)findViewById(R.id.scrollview);
 		scrollView.setOnRefreshListener(this);
+		
+		
+		initPage1();
+	}
+	
+	
+	private void initPage1(){
+		page01.findViewById(R.id.start_01).setOnClickListener(this);
+		page01.findViewById(R.id.start_02).setOnClickListener(this);
+		page01.findViewById(R.id.start_03).setOnClickListener(this);
+		page01.findViewById(R.id.start_04).setOnClickListener(this);
+		page01.findViewById(R.id.start_05).setOnClickListener(this);
+		page01.findViewById(R.id.start_06).setOnClickListener(this);
+		page01.findViewById(R.id.start_07).setOnClickListener(this);
+		page01.findViewById(R.id.start_08).setOnClickListener(this);
+		page01.findViewById(R.id.start_09).setOnClickListener(this);
+		page01.findViewById(R.id.start_10).setOnClickListener(this);
+		page01.findViewById(R.id.start_11).setOnClickListener(this);
+		page01.findViewById(R.id.start_12).setOnClickListener(this);
 	}
 
 	@Override
@@ -139,6 +165,11 @@ public class ZoneActivity extends BaseActivity implements OnClickListener,  OnRe
 			}
 			isCurrentRight = true;
 			viewpager.setCurrentItem(1);
+		}else {
+			if(v.getTag()!=null){
+				Intent intent  = new Intent(this, StarInfoActivity.class);
+				startActivity(intent);
+			}
 		}
 	}
 
