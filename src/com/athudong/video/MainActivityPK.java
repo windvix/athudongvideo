@@ -1,5 +1,7 @@
 package com.athudong.video;
 
+import com.athudong.video.dialog.MenuDialog;
+
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,6 +33,8 @@ public class MainActivityPK implements OnClickListener {
 
 		root.findViewById(R.id.start_thumb_btn).setOnClickListener(this);
 
+		root.findViewById(R.id.menuBtn).setOnClickListener(this);
+		
 		reset();
 	}
 
@@ -80,6 +84,9 @@ public class MainActivityPK implements OnClickListener {
 		}else if(id==R.id.realBottomBtn01||id==R.id.realTopBtn04){
 			Intent intent = new Intent(act, ProfileActivity.class);
 			act.startActivity(intent);
+		}else if(id==R.id.menuBtn){
+			MenuDialog dialog = new MenuDialog(act);
+			dialog.show();
 		}
 
 		else {
