@@ -175,7 +175,6 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		public boolean isViewFromObject(View arg0, Object arg1) {
 			return arg0 == arg1;
 		}
-
 	}
 
 	private int currIndex = 0;

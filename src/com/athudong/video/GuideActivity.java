@@ -101,7 +101,7 @@ public class GuideActivity extends BaseActivity implements OnClickListener {
 	 * 显示登录界面
 	 */
 	private void showLoginPage() {
-
+		
 	}
 
 	class ViewPagerAdapter extends PagerAdapter {

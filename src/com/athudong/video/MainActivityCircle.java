@@ -3,12 +3,11 @@ package com.athudong.video;
 import com.athudong.video.dialog.MenuDialog;
 
 import android.content.Intent;
-import android.sax.StartElementListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AbsoluteLayout.LayoutParams;
-import android.widget.LinearLayout;
 
+@SuppressWarnings("deprecation")
 public class MainActivityCircle implements OnClickListener {
 
 	private MainActivity act;
@@ -96,7 +95,6 @@ public class MainActivityCircle implements OnClickListener {
 		view.post(new Runnable() {
 			@Override
 			public void run() {
-				@SuppressWarnings("deprecation")
 				LayoutParams lp = (LayoutParams) view.getLayoutParams();
 				lp.x = (int) (mainWidth1 - smallCircleR);
 				lp.y = (int) (top + r - mainHeight1 - smallCircleR);
@@ -110,7 +108,6 @@ public class MainActivityCircle implements OnClickListener {
 		view.post(new Runnable() {
 			@Override
 			public void run() {
-				@SuppressWarnings("deprecation")
 				LayoutParams lp = (LayoutParams) view.getLayoutParams();
 				lp.x = (int) (mainWidth2 - smallCircleR);
 				lp.y = (int) (top + r - mainHeight2 - smallCircleR);
