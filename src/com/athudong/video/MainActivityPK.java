@@ -77,6 +77,9 @@ public class MainActivityPK implements OnClickListener {
 				act.toast("关注+1");
 				add = true;
 			}
+		}else if(id==R.id.realBottomBtn01||id==R.id.realTopBtn04){
+			Intent intent = new Intent(act, ProfileActivity.class);
+			act.startActivity(intent);
 		}
 
 		else {
