@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2" >
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fans_head_bg"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/headImg"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/fans_01"
+            android:paddingTop="2dp"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:orientation="vertical" 
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jone Li声援会"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="300/300"
+            android:textColor="#AFAFAF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="本群已满,请加Jone Li第二个声援会"
+            android:textColor="#AFAFAF"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

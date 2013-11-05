@@ -3,8 +3,8 @@ package com.athudong.video;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.athudong.video.adapter.MsgAdapter;
 import com.athudong.video.bean.Msg;
-import com.athudong.video.component.MsgAdapter;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;

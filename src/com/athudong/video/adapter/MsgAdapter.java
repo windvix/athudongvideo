@@ -1,4 +1,4 @@
-package com.athudong.video.component;
+package com.athudong.video.adapter;
 
 import java.util.List;
 

@@ -12,7 +12,7 @@ public class ProfileActivity extends BaseActivity{
 
 	@Override
 	protected void initView(Bundle savedInstanceState) {
-		
+		setContentView(R.layout.activity_profile);
 	}
 
 	@Override
