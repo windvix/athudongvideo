@@ -2,6 +2,8 @@ package com.athudong.video.bean;
 
 public class FansTun {
 
+	private int id;
+	
 	private String name;
 	private String size;
 	private String msg;
@@ -23,4 +25,11 @@ public class FansTun {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 }
