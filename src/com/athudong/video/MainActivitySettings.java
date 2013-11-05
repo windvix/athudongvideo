@@ -1,6 +1,7 @@
 package com.athudong.video;
 
 import com.athudong.video.dialog.ConfirmDialog;
+import com.athudong.video.dialog.MenuDialog;
 
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -27,6 +28,8 @@ public class MainActivitySettings implements OnClickListener {
 		root.findViewById(R.id.setting_btn_sohu).setOnClickListener(this);
 		root.findViewById(R.id.setting_btn_vip).setOnClickListener(this);
 		root.findViewById(R.id.setting_btn_wallet).setOnClickListener(this);
+		
+		root.findViewById(R.id.menuBtn).setOnClickListener(this);
 	}
 
 	@Override
@@ -54,6 +57,9 @@ public class MainActivitySettings implements OnClickListener {
 				}
 			});
 			
+		}else if(id==R.id.menuBtn){
+			MenuDialog dialog = new MenuDialog(act);
+			dialog.show();
 		}
 	}
 

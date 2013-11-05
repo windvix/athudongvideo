@@ -1,5 +1,7 @@
 package com.athudong.video;
 
+import com.athudong.video.dialog.MenuDialog;
+
 import android.content.Intent;
 import android.sax.StartElementListener;
 import android.view.View;
@@ -19,6 +21,7 @@ public class MainActivityCircle implements OnClickListener {
 		root.findViewById(R.id.circle_layout_02).setOnClickListener(this);
 		root.findViewById(R.id.circle_layout_03).setOnClickListener(this);
 		root.findViewById(R.id.circle_layout_04).setOnClickListener(this);
+		root.findViewById(R.id.menuBtn).setOnClickListener(this);
 	}
 
 	@Override
@@ -38,6 +41,9 @@ public class MainActivityCircle implements OnClickListener {
 		} else if (id == R.id.circle_layout_04) {
 			Intent intent = new Intent(act, MsgBoardActivity.class);
 			act.startActivity(intent);
+		}else if(id==R.id.menuBtn){
+			MenuDialog dialog = new MenuDialog(act);
+			dialog.show();
 		}
 
 		else {

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.athudong.video.adapter.MsgAdapter;
 import com.athudong.video.bean.Msg;
+import com.athudong.video.dialog.MenuDialog;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;
@@ -12,9 +13,10 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
 
 import android.os.Handler;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ListView;
 
-public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemVisibleListener {
+public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemVisibleListener , OnClickListener{
 
 	private MainActivity act;
 	private View root;
@@ -51,6 +53,7 @@ public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemV
 		adapter = new MsgAdapter(act, R.layout.one_msg_template, msgList);
 		actualListView.setAdapter(adapter);
 		adapter.notifyDataSetChanged();
+		root.findViewById(R.id.menuBtn).setOnClickListener(this);
 	}
 
 	@Override
@@ -69,6 +72,15 @@ public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemV
 	public void onLastItemVisible() {
 		MainActivityMsg.this.act.toast("已经到最底了");
 		adapter.notifyDataSetChanged();
+	}
+
+	@Override
+	public void onClick(View v) {
+		int id = v.getId();
+		if(id==R.id.menuBtn){
+			MenuDialog dialog = new MenuDialog(act);
+			dialog.show();
+		}
 	}
 
 }
