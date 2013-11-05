@@ -3,7 +3,6 @@ package com.athudong.video;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
@@ -14,17 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-import com.athudong.video.MainActivity.ViewPagerAdapter;
-import com.athudong.video.MainActivity.ViewPagerPageChangeListener;
 import com.athudong.video.component.AnimatorPath;
-import com.athudong.video.component.CircleAnim;
-import com.athudong.video.component.PKAnim;
 import com.athudong.video.component.PathEvaluator;
 import com.athudong.video.component.PathPoint;
 import com.athudong.video.task.BaseTask;
