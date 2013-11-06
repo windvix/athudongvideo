@@ -82,14 +82,32 @@ public class SelectResDialog extends Dialog implements android.view.View.OnClick
 				takePhoto();
 			} else if (type == TYPE_VIDEO) {
 				takeVideo();
+			} else if (type == TYPE_AUDIO) {
+				takeAudio();
 			}
 		} else if (id == R.id.btn_02) {
 			if (type == TYPE_PIC) {
 				selectPhoto();
-			}else if(type==TYPE_VIDEO){
+			} else if (type == TYPE_VIDEO) {
 				selectVideo();
+			} else if (type == TYPE_AUDIO) {
+				selectAudio();
 			}
 		}
+	}
+
+	private void takeAudio() {
+		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+		intent.setType("audio/amr");
+		intent.setClassName("com.android.soundrecorder", "com.android.soundrecorder.SoundRecorder");
+		activity.startActivityForResult(intent, AUDIO_TAKE);
+	}
+
+	private void selectAudio() {
+		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+		intent.setType("audio/amr");
+		Intent wrapperIntent = Intent.createChooser(intent, null);
+		activity.startActivityForResult(wrapperIntent, AUDIO_SELECT);
 	}
 
 	private void takeVideo() {
@@ -112,10 +130,10 @@ public class SelectResDialog extends Dialog implements android.view.View.OnClick
 		}
 	}
 
-	private void selectVideo(){
+	private void selectVideo() {
 		Intent innerIntent = new Intent(Intent.ACTION_GET_CONTENT);
 
-		innerIntent.setType("video/*"); 
+		innerIntent.setType("video/*");
 
 		Intent wrapperIntent = Intent.createChooser(innerIntent, null);
 
