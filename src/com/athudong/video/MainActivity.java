@@ -34,6 +34,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	private MainActivityCircle mainCircle;
 
+	private MainActivitySettings mainSettings;
+
 	@Override
 	protected void initView(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_main);
@@ -61,7 +63,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		mainPk = new MainActivityPK(this, pkView);
 		mainCircle = new MainActivityCircle(this, circleView);
 		new MainActivityMsg(this, msgView);
-		new MainActivitySettings(this, settingView);
+		mainSettings = new MainActivitySettings(this, settingView);
 		new MainActivityVideo(this, videoView);
 
 		bottomBtnList = new ArrayList<View>();
@@ -153,6 +155,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			super.handleMessage(msg);
 			isExit = false;
 		}
+	};
+
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		mainSettings.onActivityResult(requestCode, resultCode, data);
 	};
 
 	@Override

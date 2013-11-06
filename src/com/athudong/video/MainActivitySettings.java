@@ -2,7 +2,9 @@ package com.athudong.video;
 
 import com.athudong.video.dialog.ConfirmDialog;
 import com.athudong.video.dialog.MenuDialog;
+import com.athudong.video.dialog.UploadResDialog;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.animation.Animation;
@@ -16,7 +18,6 @@ public class MainActivitySettings implements OnClickListener {
 		this.act = act;
 		this.root = root;
 
-		root.findViewById(R.id.uploadLayout).setVisibility(View.VISIBLE);
 
 		root.findViewById(R.id.headImg).setOnClickListener(this);
 		root.findViewById(R.id.exitBtn).setOnClickListener(this);
@@ -36,7 +37,7 @@ public class MainActivitySettings implements OnClickListener {
 	public void onClick(View v) {
 		int id = v.getId();
 		if (id == R.id.headImg) {
-			toggleUploadLayout();
+			new UploadResDialog(act).show();
 		}else if (id==R.id.exitBtn){
 			final ConfirmDialog dialog= new ConfirmDialog(act,"确定退出吗？");
 			dialog.show();
@@ -62,21 +63,8 @@ public class MainActivitySettings implements OnClickListener {
 			dialog.show();
 		}
 	}
-
-	private void toggleUploadLayout() {
-		View view = root.findViewById(R.id.uploadLayout);
-
-		if (view.getVisibility() == View.GONE) {
-
-			Animation anim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -2.0f, Animation.RELATIVE_TO_SELF, 0.0f);
-			anim.setDuration(250);
-			view.setAnimation(anim);
-			view.setVisibility(View.VISIBLE);
-		}else{
-			Animation anim = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, 0.0f, Animation.RELATIVE_TO_SELF, -2.0f);
-			anim.setDuration(250);
-			view.setAnimation(anim);
-			view.setVisibility(View.GONE);
-		}
-	}
+	
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		act.toast("上传完成");
+	};
 }
