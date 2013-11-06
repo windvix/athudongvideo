@@ -90,20 +90,15 @@ public class BigPictureActivity extends BaseActivity implements OnClickListener 
 
 	@Override
 	protected void beforeEveryVisable() {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	protected void afterEveryInVisable() {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	protected void beforeDestory() {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override

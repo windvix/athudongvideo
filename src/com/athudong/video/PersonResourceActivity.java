@@ -49,6 +49,9 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 	
 	private View playAudioLayout;
 	
+	private View page1;
+	private View page2;
+	
 	@Override
 	protected void initView(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_personres);
@@ -66,10 +69,13 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		listView = new ArrayList<View>();
 
 		
-		View page1 = createView(R.layout.personres_page1);
+		page1 = createView(R.layout.personres_page1);
+		page2 = createView(R.layout.personres_page2);
+		
+		
 		
 		listView.add(page1);
-		listView.add(createView(R.layout.personres_page2));
+		listView.add(page2);
 		listView.add(createView(R.layout.personres_page3));
 
 		viewpager.setAdapter(new ViewPagerAdapter(listView));
@@ -103,6 +109,11 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		
 		playAudioLayout = findViewById(R.id.play_audio_layout);
 		playAudioLayout.setVisibility(View.GONE);
+		
+		
+		page2.findViewById(R.id.audio_01).setOnClickListener(this);
+		page2.findViewById(R.id.audio_02).setOnClickListener(this);
+		page2.findViewById(R.id.audio_03).setOnClickListener(this);
 	}
 
 	@Override
@@ -164,6 +175,8 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		} else if(id==R.id.video_04){
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
 			new VideoHelper(this,url);
+		}else if(id==R.id.audio_01){
+			v.setBackgroundResource(R.drawable.audio_list_bg_press);
 		}
 		else{
 			toast("内测中，敬请期待");

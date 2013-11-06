@@ -11,6 +11,7 @@
         <!-- one -->
 
         <LinearLayout
+            android:id="@+id/audio_01"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/audio_list_bg"
@@ -56,6 +57,7 @@
         <!-- one -->
 
         <LinearLayout
+            android:id="@+id/audio_02"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/audio_list_bg"
@@ -101,6 +103,7 @@
         <!-- one -->
 
         <LinearLayout
+            android:id="@+id/audio_03"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="@drawable/audio_list_bg"
