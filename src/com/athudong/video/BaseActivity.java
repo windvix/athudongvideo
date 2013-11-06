@@ -335,6 +335,12 @@ public abstract class BaseActivity extends Activity {
 		this.isFinished = true;
 	}
 	
+	
+	public String getServerAddr(){
+		return getString(R.string.server_addr);
+	}
+	
+	
 	/**
 	 * 界面销毁之前的做的事情 
 	 */

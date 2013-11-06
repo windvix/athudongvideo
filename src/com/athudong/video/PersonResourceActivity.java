@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -20,6 +21,7 @@ import android.widget.ScrollView;
 import com.athudong.video.component.AnimatorPath;
 import com.athudong.video.component.PathEvaluator;
 import com.athudong.video.component.PathPoint;
+import com.athudong.video.component.VideoHelper;
 import com.athudong.video.task.BaseTask;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
@@ -143,10 +145,16 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 			viewpager.setCurrentItem(1);
 		} else if (id == R.id.page_btn_03) {
 			viewpager.setCurrentItem(2);
-		}else{
+		} else if(id==R.id.video_01){
+			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
+			new VideoHelper(this,url);
+		}
+		
+		else{
 			toast("内测中，敬请期待");
 		}
 	}
+
 
 	class ViewPagerAdapter extends PagerAdapter {
 		private List<View> list = null;

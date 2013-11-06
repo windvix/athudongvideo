@@ -5,4 +5,6 @@
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
 
+    <!-- 服务器地址 -->
+    <string name="server_addr">http://192.168.0.111/</string>
 </resources>
