@@ -47,6 +47,7 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 	private ImageView cursor;
 
 	
+	private View playAudioLayout;
 	
 	@Override
 	protected void initView(Bundle savedInstanceState) {
@@ -99,6 +100,9 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		page1.findViewById(R.id.video_02).setOnClickListener(this);
 		page1.findViewById(R.id.video_03).setOnClickListener(this);
 		page1.findViewById(R.id.video_04).setOnClickListener(this);
+		
+		playAudioLayout = findViewById(R.id.play_audio_layout);
+		playAudioLayout.setVisibility(View.GONE);
 	}
 
 	@Override
@@ -139,11 +143,14 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		if (id == R.id.back_btn) {
 			finish();
 		} else if (id == R.id.page_btn_01) {
+			playAudioLayout.setVisibility(View.GONE);
 			viewpager.setCurrentItem(0);
 
 		} else if (id == R.id.page_btn_02) {
+			playAudioLayout.setVisibility(View.VISIBLE);
 			viewpager.setCurrentItem(1);
 		} else if (id == R.id.page_btn_03) {
+			playAudioLayout.setVisibility(View.GONE);
 			viewpager.setCurrentItem(2);
 		} else if(id==R.id.video_01){
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";

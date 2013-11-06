@@ -4,8 +4,6 @@
     android:layout_height="match_parent"
     android:background="#fff" >
 
-
-
     <com.handmark.pulltorefresh.library.PullToRefreshScrollView
         xmlns:ptr="http://schemas.android.com/apk/res-auto"
         android:id="@+id/scrollview"
@@ -25,6 +23,7 @@
             android:gravity="top"
             android:orientation="vertical" />
     </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
     <ImageView
         android:id="@+id/back_btn"
         android:layout_width="40dp"
@@ -35,4 +34,27 @@
         android:layout_marginTop="2dp"
         android:scaleType="fitCenter"
         android:src="@drawable/back_btn" />
+
+    <LinearLayout
+        android:id="@+id/play_audio_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E0E8E7"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <SeekBar
+            android:id="@+id/ctrl_skbProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="100"
+            android:maxHeight="30dp"
+            android:minHeight="30dp"
+            android:progress="50"
+            android:progressDrawable="@drawable/seek_img"
+            android:thumb="@drawable/seek_thumb" />
+    </LinearLayout>
+
 </RelativeLayout>

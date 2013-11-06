@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/pop_layout"
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="240dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottom_dialog_bg"
         android:gravity="center_horizontal"
