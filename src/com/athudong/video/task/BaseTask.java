@@ -37,9 +37,13 @@ public abstract class BaseTask extends AsyncTask<Void, Void, Void> {
 		}
 	}
 
+	public BaseActivity getActivity() {
+		return act;
+	}
+
 	@Override
 	protected void onProgressUpdate(Void... values) {
-		if (!isCancelled() && act!=null && !act.isFinished()) {
+		if (!isCancelled() && act != null && !act.isFinished()) {
 			onProgressUpdate();
 		}
 	}

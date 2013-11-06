@@ -148,8 +148,16 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		} else if(id==R.id.video_01){
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
 			new VideoHelper(this,url);
+		} else if(id==R.id.video_02){
+			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
+			new VideoHelper(this,url);
+		} else if(id==R.id.video_03){
+			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
+			new VideoHelper(this,url);
+		} else if(id==R.id.video_04){
+			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
+			new VideoHelper(this,url);
 		}
-		
 		else{
 			toast("内测中，敬请期待");
 		}
