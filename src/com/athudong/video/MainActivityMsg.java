@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.athudong.video.adapter.MsgAdapter;
 import com.athudong.video.bean.Msg;
-import com.athudong.video.dialog.MenuDialog;
+import com.athudong.video.dialog.LoginDialog;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;
@@ -78,7 +78,7 @@ public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemV
 	public void onClick(View v) {
 		int id = v.getId();
 		if(id==R.id.menuBtn){
-			MenuDialog dialog = new MenuDialog(act);
+			LoginDialog dialog = new LoginDialog(act);
 			dialog.show();
 		}
 	}

@@ -11,6 +11,7 @@ import org.apache.http.util.EncodingUtils;
 import com.athudong.video.bean.User;
 import com.athudong.video.task.BaseTask;
 import com.athudong.video.util.AppConst;
+import com.baidu.frontia.Frontia;
 
 import android.app.Activity;
 import android.content.Context;
@@ -36,6 +37,8 @@ import android.widget.Toast;
  */
 public abstract class BaseActivity extends Activity {
 
+	private static final String AK = "OR0DIumPj7taq3GZjSiEZvNk";
+	
 	/**
 	 * 当前界面的任务列表
 	 */
@@ -43,6 +46,10 @@ public abstract class BaseActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		boolean isInit = Frontia.init(getApplicationContext(), AK);
+		if(isInit){
+			
+		}
 		initView(savedInstanceState);
 		super.onCreate(savedInstanceState);
 	}

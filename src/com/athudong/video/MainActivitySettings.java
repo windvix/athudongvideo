@@ -1,7 +1,7 @@
 package com.athudong.video;
 
 import com.athudong.video.dialog.ConfirmDialog;
-import com.athudong.video.dialog.MenuDialog;
+import com.athudong.video.dialog.LoginDialog;
 import com.athudong.video.dialog.UploadResDialog;
 
 import android.content.Intent;
@@ -59,7 +59,7 @@ public class MainActivitySettings implements OnClickListener {
 			});
 			
 		}else if(id==R.id.menuBtn){
-			MenuDialog dialog = new MenuDialog(act);
+			LoginDialog dialog = new LoginDialog(act);
 			dialog.show();
 		}
 	}

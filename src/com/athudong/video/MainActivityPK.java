@@ -1,6 +1,6 @@
 package com.athudong.video;
 
-import com.athudong.video.dialog.MenuDialog;
+import com.athudong.video.dialog.LoginDialog;
 
 import android.content.Intent;
 import android.view.View;
@@ -85,7 +85,7 @@ public class MainActivityPK implements OnClickListener {
 			Intent intent = new Intent(act, ProfileActivity.class);
 			act.startActivity(intent);
 		}else if(id==R.id.menuBtn){
-			MenuDialog dialog = new MenuDialog(act);
+			LoginDialog dialog = new LoginDialog(act);
 			dialog.show();
 		}
 
