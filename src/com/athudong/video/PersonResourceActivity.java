@@ -17,8 +17,10 @@ import android.view.View.OnTouchListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.SeekBar;
 
 import com.athudong.video.component.AnimatorPath;
+import com.athudong.video.component.AudioHelper;
 import com.athudong.video.component.PathEvaluator;
 import com.athudong.video.component.PathPoint;
 import com.athudong.video.component.VideoHelper;
@@ -46,12 +48,11 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 
 	private ImageView cursor;
 
-	
 	private View playAudioLayout;
-	
+
 	private View page1;
 	private View page2;
-	
+
 	@Override
 	protected void initView(Bundle savedInstanceState) {
 		setContentView(R.layout.activity_personres);
@@ -68,12 +69,9 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		viewpager = (ViewPager) vpView.findViewById(R.id.viewpager);
 		listView = new ArrayList<View>();
 
-		
 		page1 = createView(R.layout.personres_page1);
 		page2 = createView(R.layout.personres_page2);
-		
-		
-		
+
 		listView.add(page1);
 		listView.add(page2);
 		listView.add(createView(R.layout.personres_page3));
@@ -100,35 +98,38 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		contentLayout.addView(vpView);
 
 		cursor = (ImageView) findViewById(R.id.cursor);
-		
-		
+
 		page1.findViewById(R.id.video_01).setOnClickListener(this);
 		page1.findViewById(R.id.video_02).setOnClickListener(this);
 		page1.findViewById(R.id.video_03).setOnClickListener(this);
 		page1.findViewById(R.id.video_04).setOnClickListener(this);
-		
+
 		playAudioLayout = findViewById(R.id.play_audio_layout);
 		playAudioLayout.setVisibility(View.GONE);
-		
-		
-		page2.findViewById(R.id.audio_01).setOnClickListener(this);
-		page2.findViewById(R.id.audio_02).setOnClickListener(this);
-		page2.findViewById(R.id.audio_03).setOnClickListener(this);
+		audioHelper = new AudioHelper(this, (LinearLayout) page2.findViewById(R.id.contentLayout), (SeekBar) playAudioLayout.findViewById(R.id.seekbar));
 	}
+
+	private AudioHelper audioHelper;
 
 	@Override
 	protected void beforeEveryVisable() {
-
+		if (audioHelper != null) {
+			audioHelper.continuePlay();
+		}
 	}
-
+	
 	@Override
 	protected void afterEveryInVisable() {
-
+		if (audioHelper != null) {
+			audioHelper.pause();
+		}
 	}
 
 	@Override
 	protected void beforeDestory() {
-
+		if (audioHelper != null) {
+			audioHelper.stop();
+		}
 	}
 
 	@Override
@@ -139,7 +140,6 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 	@Override
 	public void onRefresh(PullToRefreshBase<ScrollView> refreshView) {
 		new Handler().postDelayed(new Runnable() {
-
 			@Override
 			public void run() {
 				scrollView.onRefreshComplete();
@@ -156,33 +156,33 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 		} else if (id == R.id.page_btn_01) {
 			playAudioLayout.setVisibility(View.GONE);
 			viewpager.setCurrentItem(0);
-
 		} else if (id == R.id.page_btn_02) {
 			playAudioLayout.setVisibility(View.VISIBLE);
 			viewpager.setCurrentItem(1);
+
 		} else if (id == R.id.page_btn_03) {
 			playAudioLayout.setVisibility(View.GONE);
 			viewpager.setCurrentItem(2);
-		} else if(id==R.id.video_01){
+		} else if (id == R.id.video_01) {
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
-			new VideoHelper(this,url);
-		} else if(id==R.id.video_02){
+			audioHelper.pause();
+			new VideoHelper(this, url);
+		} else if (id == R.id.video_02) {
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
-			new VideoHelper(this,url);
-		} else if(id==R.id.video_03){
+			audioHelper.pause();
+			new VideoHelper(this, url);
+		} else if (id == R.id.video_03) {
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
-			new VideoHelper(this,url);
-		} else if(id==R.id.video_04){
+			audioHelper.pause();
+			new VideoHelper(this, url);
+		} else if (id == R.id.video_04) {
 			String url = Environment.getExternalStorageDirectory() + "/test.3gp";
-			new VideoHelper(this,url);
-		}else if(id==R.id.audio_01){
-			v.setBackgroundResource(R.drawable.audio_list_bg_press);
-		}
-		else{
+			audioHelper.pause();
+			new VideoHelper(this, url);
+		} else {
 			toast("内测中，敬请期待");
 		}
 	}
-
 
 	class ViewPagerAdapter extends PagerAdapter {
 		private List<View> list = null;
@@ -233,10 +233,10 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 			proxy = AnimatorProxy.wrap(cursor);
 			AnimatorPath path = new AnimatorPath();
 			if (page == 0) {
-				((ImageView)vpView.findViewById(R.id.page_btn_01)).setImageResource(R.drawable.res_btn_01_press);
-				((ImageView)vpView.findViewById(R.id.page_btn_02)).setImageResource(R.drawable.res_btn_02_default);
-				((ImageView)vpView.findViewById(R.id.page_btn_03)).setImageResource(R.drawable.res_btn_03_default);
-				
+				((ImageView) vpView.findViewById(R.id.page_btn_01)).setImageResource(R.drawable.res_btn_01_press);
+				((ImageView) vpView.findViewById(R.id.page_btn_02)).setImageResource(R.drawable.res_btn_02_default);
+				((ImageView) vpView.findViewById(R.id.page_btn_03)).setImageResource(R.drawable.res_btn_03_default);
+
 				if (currIndex == 1) {
 					path.moveTo(1 * getScreenWidth() / 3, 0);
 				} else if (currIndex == 2) {
@@ -244,9 +244,9 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 				}
 				path.lineTo(0, 0);
 			} else if (page == 1) {
-				((ImageView)vpView.findViewById(R.id.page_btn_01)).setImageResource(R.drawable.res_btn_01_default);
-				((ImageView)vpView.findViewById(R.id.page_btn_02)).setImageResource(R.drawable.res_btn_02_press);
-				((ImageView)vpView.findViewById(R.id.page_btn_03)).setImageResource(R.drawable.res_btn_03_default);
+				((ImageView) vpView.findViewById(R.id.page_btn_01)).setImageResource(R.drawable.res_btn_01_default);
+				((ImageView) vpView.findViewById(R.id.page_btn_02)).setImageResource(R.drawable.res_btn_02_press);
+				((ImageView) vpView.findViewById(R.id.page_btn_03)).setImageResource(R.drawable.res_btn_03_default);
 				if (currIndex == 0) {
 					path.moveTo(0, 0);
 				} else if (currIndex == 2) {
@@ -254,9 +254,9 @@ public class PersonResourceActivity extends BaseActivity implements OnRefreshLis
 				}
 				path.lineTo(1 * getScreenWidth() / 3, 0);
 			} else if (page == 2) {
-				((ImageView)vpView.findViewById(R.id.page_btn_01)).setImageResource(R.drawable.res_btn_01_default);
-				((ImageView)vpView.findViewById(R.id.page_btn_02)).setImageResource(R.drawable.res_btn_02_default);
-				((ImageView)vpView.findViewById(R.id.page_btn_03)).setImageResource(R.drawable.res_btn_03_press);
+				((ImageView) vpView.findViewById(R.id.page_btn_01)).setImageResource(R.drawable.res_btn_01_default);
+				((ImageView) vpView.findViewById(R.id.page_btn_02)).setImageResource(R.drawable.res_btn_02_default);
+				((ImageView) vpView.findViewById(R.id.page_btn_03)).setImageResource(R.drawable.res_btn_03_press);
 				if (currIndex == 0) {
 					path.moveTo(0, 0);
 				} else if (currIndex == 1) {
