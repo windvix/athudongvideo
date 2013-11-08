@@ -41,6 +41,8 @@ public class UploadResDialog extends Dialog implements android.view.View.OnClick
 
 		setCancelable(true);
 		setCanceledOnTouchOutside(true);
+		
+		findViewById(R.id.clickLayout).setOnClickListener(this);
 	}
 
 	@Override

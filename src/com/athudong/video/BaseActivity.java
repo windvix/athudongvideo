@@ -44,14 +44,15 @@ public abstract class BaseActivity extends Activity {
 	 */
 	private List<BaseTask> taskList = new ArrayList<BaseTask>();
 
+	private static boolean isFrontiaInit = false;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		boolean isInit = Frontia.init(getApplicationContext(), AK);
-		if(isInit){
-			
-		}
 		initView(savedInstanceState);
 		super.onCreate(savedInstanceState);
+		if(!isFrontiaInit){
+			isFrontiaInit = Frontia.init(getApplicationContext(), AK);
+		}
 	}
 	
 	public Handler getHandler(){

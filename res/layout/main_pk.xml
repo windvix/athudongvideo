@@ -26,12 +26,13 @@
 
         <ImageView
             android:id="@+id/menuBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:scaleType="centerInside"
+            android:scaleType="fitEnd"
+            android:paddingRight="8dp"
             android:src="@drawable/action_bar_btn" />
     </RelativeLayout>
     <!-- actionbar end -->
@@ -124,6 +125,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/topNameTv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -135,12 +137,13 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/headLineLayoutb"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="horizontal" >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -148,13 +151,33 @@
             android:orientation="horizontal" >
 
             <ImageView
+                android:id="@+id/leftHeadImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
                 android:src="@drawable/head_left" />
-        </LinearLayout>
+            
+            
+            <TextView 
+                android:id="@+id/leftAddOneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:shadowColor="#000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:visibility="invisible"
+                android:shadowRadius="4"
+                android:textColor="#FFF200"
+                />
+        </RelativeLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -162,11 +185,31 @@
             android:orientation="horizontal" >
 
             <ImageView
+                android:id="@+id/rightHeadImg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"
+                android:layout_centerInParent="true"
                 android:src="@drawable/head_right" />
-        </LinearLayout>
+            
+            
+            <TextView 
+                android:id="@+id/rightAddOneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:shadowColor="#000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:visibility="invisible"
+                android:shadowRadius="4"
+                android:textColor="#FFF200"
+                />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -181,6 +224,7 @@
             android:layout_weight="3" >
 
             <TextView
+                android:id="@+id/bottomNameTv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

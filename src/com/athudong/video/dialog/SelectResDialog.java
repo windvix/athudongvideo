@@ -69,6 +69,8 @@ public class SelectResDialog extends Dialog implements android.view.View.OnClick
 
 		setCancelable(true);
 		setCanceledOnTouchOutside(true);
+		
+		findViewById(R.id.clickLayout).setOnClickListener(this);
 	}
 
 	@Override
@@ -76,7 +78,7 @@ public class SelectResDialog extends Dialog implements android.view.View.OnClick
 		int id = v.getId();
 		dismiss();
 		if (id == R.id.btn_03) {
-			new UploadResDialog(activity).show();
+			
 		} else if (id == R.id.btn_01) {
 			if (type == TYPE_PIC) {
 				takePhoto();

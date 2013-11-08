@@ -18,9 +18,6 @@ import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.athudong.video.MainActivity.ViewPagerPageChangeListener;
-import com.athudong.video.component.CircleAnim;
-import com.athudong.video.component.PKAnim;
 import com.athudong.video.task.BaseTask;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnRefreshListener;
