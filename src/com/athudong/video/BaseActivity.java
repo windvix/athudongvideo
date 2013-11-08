@@ -419,7 +419,6 @@ public abstract class BaseActivity extends Activity {
 			int sampleSize = (outWidth / width + outHeight / height) / 2;
 			opt.inSampleSize = sampleSize;
 		}
-
 		opt.inJustDecodeBounds = false;// 最后把标志复原
 		return opt;
 	}
