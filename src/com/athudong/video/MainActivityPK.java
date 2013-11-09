@@ -1,8 +1,5 @@
 package com.athudong.video;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import com.athudong.video.component.PKAnim;
 import com.athudong.video.component.PKAnim2;
 import com.athudong.video.dialog.LoginDialog;
@@ -65,6 +62,9 @@ public class MainActivityPK implements OnClickListener {
 		reset();
 	}
 
+	/**
+	 * 重置
+	 */
 	public void reset() {
 		addOneLeft.setVisibility(View.INVISIBLE);
 		addOneRight.setVisibility(View.INVISIBLE);
@@ -136,6 +136,9 @@ public class MainActivityPK implements OnClickListener {
 
 	private boolean isThumbing = false;
 	
+	/**
+	 * 投左
+	 */
 	private void thumbLeft() {
 		isThumbing = true;
 		anim(addOneLeft);
@@ -143,6 +146,9 @@ public class MainActivityPK implements OnClickListener {
 		hideRound(topNameTv, rightHeadImg);
 	}
 
+	/**
+	 * 投右
+	 */
 	private void thumbRight() {
 		isThumbing = true;
 		anim(addOneRight);

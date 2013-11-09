@@ -10,6 +10,10 @@ import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 
+
+/**
+ * 主界面设置面板处理
+ */
 public class MainActivitySettings implements OnClickListener {
 	private MainActivity act;
 	private View root;
