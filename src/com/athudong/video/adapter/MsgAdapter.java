@@ -8,6 +8,8 @@ import com.athudong.video.bean.Msg;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MsgAdapter extends ArrayAdapter<Msg> {
 
@@ -57,6 +59,30 @@ public class MsgAdapter extends ArrayAdapter<Msg> {
 				convertView = act.createView(viewId);
 			}
 		}
+		
+		if(position!=(size-1) && position!=0 && convertView!=null){
+			ImageView headImg = (ImageView)convertView.findViewById(R.id.msg_head_img);
+			TextView nameTv = (TextView)convertView.findViewById(R.id.msg_name_tv);
+			TextView timeTv = (TextView)convertView.findViewById(R.id.msg_time_tv);
+			TextView contentTv = (TextView)convertView.findViewById(R.id.msg_content_tv);
+			View shareView = convertView.findViewById(R.id.msg_share_layout);
+			
+			
+			Msg msg = getItem(position);
+			
+			headImg.setImageResource(Integer.parseInt(msg.getHeadImg()));
+			nameTv.setText(msg.getUsername());
+			timeTv.setText(msg.getTime());
+			contentTv.setText(msg.getContent());
+			if(msg.isHasShare()){
+				shareView.setVisibility(View.VISIBLE);
+			}else{
+				shareView.setVisibility(View.GONE);
+			}
+			
+			
+		}
+		
 
 		return convertView;
 	}

@@ -51,7 +51,6 @@ public class VideoViewPlayingActivity extends Activity implements OnPreparedList
 		
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
 			Log.v(TAG, "pre btn clicked");
 		}
 	};
@@ -203,7 +202,6 @@ public class VideoViewPlayingActivity extends Activity implements OnPreparedList
 	 */
 	@Override
 	public void onPrepared() {
-		// TODO Auto-generated method stub
 		Log.v(TAG, "onPrepared");
 		mPlayerStatus = PLAYER_STATUS.PLAYER_PREPARED;
 	}	

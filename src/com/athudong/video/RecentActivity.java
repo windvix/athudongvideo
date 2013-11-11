@@ -43,26 +43,22 @@ public class RecentActivity extends BaseActivity implements OnClickListener, OnR
 
 	@Override
 	protected void beforeEveryVisable() {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	protected void afterEveryInVisable() {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	protected void beforeDestory() {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override
 	public void executeTaskResult(BaseTask task, Object data) {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override

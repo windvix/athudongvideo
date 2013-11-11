@@ -40,7 +40,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:text="歌"
+                            android:text="经"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -49,7 +49,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:text="星"
+                            android:text="纪"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -117,7 +117,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_01" />
+                    android:src="@drawable/test_boss_01" />
             </LinearLayout>
 
             <LinearLayout
@@ -133,7 +133,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_02" />
+                    android:src="@drawable/test_boss_02" />
             </LinearLayout>
 
             <LinearLayout
@@ -149,7 +149,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_02" />
+                    android:src="@drawable/test_boss_03" />
             </LinearLayout>
         </LinearLayout>
         <!-- one line end -->
@@ -175,7 +175,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_03" />
+                    android:src="@drawable/test_boss_04" />
             </LinearLayout>
 
             <LinearLayout
@@ -191,7 +191,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_04" />
+                    android:src="@drawable/test_boss_05" />
             </LinearLayout>
 
             <LinearLayout
@@ -207,7 +207,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_01" />
+                    android:src="@drawable/test_boss_06" />
             </LinearLayout>
 
             <!-- spe -->
@@ -234,7 +234,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:text="歌"
+                            android:text="经"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -243,7 +243,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:text="星"
+                            android:text="纪"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -330,7 +330,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:text="歌"
+                            android:text="经"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -339,7 +339,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:text="星"
+                            android:text="纪"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -407,7 +407,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_03" />
+                    android:src="@drawable/test_boss_07" />
             </LinearLayout>
 
             <LinearLayout
@@ -423,7 +423,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_04" />
+                    android:src="@drawable/test_boss_08" />
             </LinearLayout>
 
             <LinearLayout
@@ -439,7 +439,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_01" />
+                    android:src="@drawable/test_boss_09" />
             </LinearLayout>
         </LinearLayout>
         <!-- one line end -->
@@ -464,7 +464,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_02" />
+                    android:src="@drawable/test_boss_10" />
             </LinearLayout>
 
             <LinearLayout
@@ -480,7 +480,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_03" />
+                    android:src="@drawable/test_boss_11" />
             </LinearLayout>
 
             <LinearLayout
@@ -496,7 +496,7 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test_photo_04" />
+                    android:src="@drawable/test_boss_12" />
             </LinearLayout>
 
             <!-- spe -->
@@ -523,7 +523,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:text="歌"
+                            android:text="经"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -532,7 +532,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_centerInParent="true"
-                            android:text="星"
+                            android:text="纪"
                             android:textColor="#383838"
                             android:textSize="18sp"
                             android:textStyle="bold" />

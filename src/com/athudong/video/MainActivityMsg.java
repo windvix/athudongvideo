@@ -6,6 +6,7 @@ import java.util.List;
 import com.athudong.video.adapter.MsgAdapter;
 import com.athudong.video.bean.Msg;
 import com.athudong.video.dialog.LoginDialog;
+import com.athudong.video.util.TestUtil;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase.OnLastItemVisibleListener;
@@ -16,6 +17,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
 
+
+/**
+ * 
+ */
 public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemVisibleListener , OnClickListener{
 
 	private MainActivity act;
@@ -47,9 +52,21 @@ public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemV
 
 		// 最后就是给其listView加入数据了
 		msgList = new ArrayList<Msg>();
-		for (int i = 0; i < 20; i++) {
-			msgList.add(new Msg());
+		
+		msgList.add(new Msg());
+		
+		for(int i=0;i<15;i++){
+			
+			Msg msg = new Msg();
+			msg.setContent(TestUtil.getRandomContent());
+			msg.setHasShare(TestUtil.getRandomShare());
+			msg.setHeadImg(TestUtil.getRandomHeadImgId()+"");
+			msg.setTime(TestUtil.times[i]);
+			msg.setUsername(TestUtil.getRandomName());
+			msgList.add(msg);
+			
 		}
+		
 		adapter = new MsgAdapter(act, R.layout.one_msg_template, msgList);
 		actualListView.setAdapter(adapter);
 		adapter.notifyDataSetChanged();

@@ -1,17 +1,13 @@
 package com.athudong.video.component;
 
-import java.io.IOException;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.webkit.WebView.FindListener;
 
 import com.athudong.video.BaseActivity;
-import com.athudong.video.VideoViewPlayingActivity;
-import com.athudong.video.dialog.ConfirmDialog;
 import com.athudong.video.dialog.LoadingDialog;
 import com.athudong.video.util.StringUtil;
 import com.baidu.cyberplayer.sdk.BCyberPlayerFactory;
@@ -43,12 +39,24 @@ public class VideoHelper {
 		this.url = url;
 		// 初始化BCyberPlayerFactory, 在其他任何接口调用前需要先对BCyberPlayerFactory进行初始化
 		BCyberPlayerFactory.init(act);
-		if (isEngineInstalled()) {
-			playVideo();
-		} else {
-			showInstallDialog();
-		}
+		
+	
+		Uri uri = Uri.parse(url);   
+		//调用系统自带的播放器  
+		    Intent intent = new Intent(Intent.ACTION_VIEW);   
+		    intent.setDataAndType(uri,"video/mp4");  
+		    act.startActivity(intent);  
+		    
+//		if (isEngineInstalled()) {
+//			playVideo();
+//		} else {
+//			showInstallDialog();
+//		}
 	}
+	
+	
+	
+	
 
 	private Handler mUIHandler = new Handler() {
 		public void handleMessage(Message msg) {
