@@ -59,7 +59,6 @@ public class MainActivityMsg implements OnRefreshListener<ListView>, OnLastItemV
 	@Override
 	public void onRefresh(PullToRefreshBase<ListView> refreshView) {
 		new Handler().postDelayed(new Runnable() {
-
 			@Override
 			public void run() {
 				mPullRefreshListView.onRefreshComplete();

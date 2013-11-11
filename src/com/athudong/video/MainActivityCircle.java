@@ -121,7 +121,6 @@ public class MainActivityCircle implements OnClickListener {
 		view.post(new Runnable() {
 			@Override
 			public void run() {
-				@SuppressWarnings("deprecation")
 				LayoutParams lp = (LayoutParams) view.getLayoutParams();
 				lp.x = (int) (mainWidth2 - smallCircleR);
 				lp.y = (int) (top + r + mainHeight2 - smallCircleR);
@@ -136,7 +135,6 @@ public class MainActivityCircle implements OnClickListener {
 		view.post(new Runnable() {
 			@Override
 			public void run() {
-				@SuppressWarnings("deprecation")
 				LayoutParams lp = (LayoutParams) view.getLayoutParams();
 				lp.x = (int) (mainWidth1 - smallCircleR);
 				lp.y = (int) (top + r + mainHeight1 - smallCircleR);
