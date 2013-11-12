@@ -29,6 +29,9 @@ public class MsgBoardAdapter extends ArrayAdapter<MsgBoard> {
 		if (convertView == null) {
 			convertView = act.createView(viewId);
 		}
+		if(convertView!=null){
+			
+		}
 
 		return convertView;
 	}

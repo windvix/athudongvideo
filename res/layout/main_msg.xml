@@ -4,7 +4,7 @@
     android:background="#fff"
     android:orientation="vertical" >
 
-    <!-- actionbar start -->
+   <!-- actionbar start -->
 
     <RelativeLayout
         android:id="@+id/actionbar"
@@ -35,7 +35,7 @@
             android:paddingRight="8dp"
             android:src="@drawable/action_bar_btn" />
     </RelativeLayout>
-    <!-- actionbar end -->
+
 
     <!--  -->
 

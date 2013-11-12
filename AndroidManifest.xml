@@ -78,6 +78,11 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustNothing" />
         <activity
+            android:name="com.athudong.video.VideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
             android:name="com.athudong.video.RecentActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

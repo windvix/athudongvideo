@@ -11,7 +11,7 @@ public class CircleAnim {
 
 	private MainActivity act;
 
-	public static final int DUR_TIME = 350;
+	public static final int DUR_TIME = 0;
 
 	public CircleAnim(MainActivity act) {
 		this.act = act;
